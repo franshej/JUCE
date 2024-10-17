@@ -90,12 +90,12 @@ else()
 
     message(STATUS "Building juceaide")
 
-    execute_process(COMMAND "${CMAKE_COMMAND}"
-            --build "${JUCE_BINARY_DIR}/tools"
-            --config Debug
-        OUTPUT_VARIABLE command_output
-        ERROR_VARIABLE command_output
-        RESULT_VARIABLE result_variable)
+    #execute_process(COMMAND "${CMAKE_COMMAND}"
+    #        --build "${JUCE_BINARY_DIR}/tools"
+    #        --config Debug
+    #    OUTPUT_VARIABLE command_output
+    #    ERROR_VARIABLE command_output
+    #    RESULT_VARIABLE result_variable)
 
     if(result_variable)
         message(FATAL_ERROR "Failed to build juceaide\n${command_output}")
